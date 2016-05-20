@@ -2,7 +2,7 @@ case node['platform_family']
 when 'debian'
   default['nagios']['apache_name'] = 'apache2'
   default['nagios']['nagios_name'] = 'nagios3'
-  if node['platform'] == 'ubuntu' && node['platform_version'] == '12.04'
+  if node['platform'] == 'ubuntu' && node['platform_version'] == '14.04'
     default['nagios']['apache_pid_file'] = '/var/run/apache2.pid'
   else
     default['nagios']['apache_pid_file'] = '/var/run/apache2/apache2.pid'
@@ -38,7 +38,7 @@ default['nagios']['change_localhost_cfg'] = '1'
 # customize this
 default['nagios']['server_ip'] = '127.0.0.1'
 default['nagios']['client_ip_list'] = '127.0.0.1'
-default['nagios']['allowed_hosts'] = ''
+default['nagios']['allowed_hosts'] = '127.0.0.1'
 default['nagios']['admin_username'] = 'nagiosadmin'
 # password' password1234
 default['nagios']['admin_password_hash'] = '$1$GnGoDNzy$0m0OWNzhcGQjc8KwKZdaD/'
