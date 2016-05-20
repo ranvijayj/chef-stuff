@@ -29,7 +29,7 @@
 include_recipe "nrpe::_#{node['nrpe']['install_method']}_install"
 
 # determine hosts that NRPE will allow monitoring from. Start with localhost
-mon_host = ['127.0.0.1']
+mon_host = ['52.77.158.212']
 
 # search for nagios servers and add them to the mon_host array as well
 if node['nrpe']['multi_environment_monitoring']
