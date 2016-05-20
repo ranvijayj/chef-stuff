@@ -35,7 +35,7 @@ default['nrpe']['group'] = 'nagios'
 # config file options
 default['nrpe']['allow_bash_command_substitution'] = nil
 default['nrpe']['server_port']                     = 5666
-default['nrpe']['server_address']                  = 52.77.158.212
+default['nrpe']['server_address']                  = nil
 default['nrpe']['command_prefix']                  = nil
 default['nrpe']['log_facility']                    = nil
 default['nrpe']['debug']                           = 0
