@@ -1,0 +1,32 @@
+DEPENDENCIES
+  simple-kibana
+    path: .
+    metadata: true
+  simple-kibana-test
+    path: test/fixtures/cookbooks/simple-kibana-test
+
+GRAPH
+  ark (1.1.0)
+    build-essential (>= 0.0.0)
+    seven_zip (>= 0.0.0)
+    windows (>= 0.0.0)
+  build-essential (4.0.0)
+    mingw (>= 0.0.0)
+    seven_zip (>= 0.0.0)
+  chef_handler (1.4.0)
+  compat_resource (12.10.4)
+  mingw (1.0.0)
+    compat_resource (>= 0.0.0)
+    seven_zip (>= 0.0.0)
+  packagecloud (0.2.0)
+  runit (1.7.8)
+    packagecloud (>= 0.0.0)
+  seven_zip (2.0.0)
+    windows (>= 1.2.2)
+  simple-kibana (1.0.0)
+    ark (>= 0.0.0)
+    runit (>= 0.0.0)
+  simple-kibana-test (0.1.0)
+    simple-kibana (>= 0.0.0)
+  windows (1.41.0)
+    chef_handler (>= 0.0.0)

@@ -1,0 +1,30 @@
+---
+driver:
+  name: vagrant
+  customize:
+    cpus: 2
+    memory: 1024
+
+provisioner:
+  name: chef_zero
+  chef_client_path: /usr/bin/chef-client
+  require_chef_omnibus: 12.6.0
+
+transport:
+  name: sftp
+
+platforms:
+  - name: debian-7.9
+    platform: debian
+    driver_config:
+      provision_command:
+        - apt-get -y install build-essential
+
+  - name: centos-7.0
+
+suites:
+  - name: default
+    run_list:
+      - recipe[simple-kibana-test]
+    attributes:
+
