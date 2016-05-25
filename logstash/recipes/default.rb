@@ -20,8 +20,9 @@ bash "insert_line" do
   not_if "grep -q https://packages.elastic.co/logstash/2.3/debian stable main  /etc/apt/sources.list"
 end
 
-apt_update if node['platform'] == 'ubuntu' do
-  action :update
+execute 'aptupdate' do
+  command 'apt-get update'
+  user "root"
 end
 
 package ['openjdk-7-jre', 'openjdk-7-jdk']
