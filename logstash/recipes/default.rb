@@ -29,9 +29,24 @@ package ['openjdk-7-jre', 'openjdk-7-jdk']
 
 ruby_block 'set-env-java-home' do
   block do
-    ENV['JAVA_HOME'] = /usr/lib/jvm/java-1.7.0-openjdk-amd64
+    ENV['JAVA_HOME'] = "/usr/lib/jvm/java-1.7.0-openjdk-amd64"
   end
 end
+
+#ruby_block 'set-env-java-home' do
+#  block do
+#    ENV['JAVA_HOME'] = java_home
+#  end
+#end
+#
+#java_home = "export JAVA_HOME=/usr/java/jdk1.6.0_31"
+#path = "export PATH=$PATH:JAVA_HOME/bin"
+#file "/etc/profile" do
+#  content "#{java_home}\n#{path}"
+#  owner "root"
+#end
+
+
 
 execute 'aptupdate' do
   command 'apt-get update'
