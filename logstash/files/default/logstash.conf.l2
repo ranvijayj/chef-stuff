@@ -10,7 +10,7 @@
 
 input { file
 { path => "/var/log/nginx/access.log"
-  type => "nginx-access"
+  type => "nginx-php-access"
 start_position => "beginning" }
 }
 
@@ -27,7 +27,7 @@ start_position => "beginning" }
 
 
 
-filter { if [path] =~ "access" { mutate { replace => { "type" => "nginx-access" } } grok { match => { "message" => "%{COMBINEDAPACHELOG}" } } } date { match => [ "timestamp" , "dd/MMM/yyyy:HH:mm:ss Z" ] } }
+filter { if [path] =~ "access" { mutate { replace => { "type" => "nginx-php-access" } } grok { match => { "message" => "%{COMBINEDAPACHELOG}" } } } date { match => [ "timestamp" , "dd/MMM/yyyy:HH:mm:ss Z" ] } }
 
 
 output { elasticsearch
