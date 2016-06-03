@@ -11,7 +11,7 @@ end
 
 
 directory '/etc/nagios3/conf.d/hostgroups.d/elk' do
-  action: :create
+  action :create
   owner 'root'
   mode '0755'
 end
@@ -22,7 +22,7 @@ template "/etc/nagios3/conf.d/hostgroups.d/elk/elk.cfg" do
 end
 
 directory '/etc/nagios3/conf.d/services.d/elk' do
-  action: :create
+  action :create
   owner 'root'
   mode '0755'
 end
