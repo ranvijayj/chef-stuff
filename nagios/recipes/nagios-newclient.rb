@@ -6,7 +6,7 @@ end
 
 template "/etc/nagios3/conf.d/hosts.d/elk/elk.cfg" do
   source "tata-hosts.erb"
-  variables( :a => 'elk', :b => '30.0.30.20' )
+  variables( :a => 'elk', :b => "30.0.30.20" )
 end
 
 
