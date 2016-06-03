@@ -18,7 +18,7 @@ end
 
 template "/etc/nagios3/conf.d/hostgroups.d/elk/elk.cfg" do
   source "tata-hosts.erb"
-  variables( :a => 'elk', :b => 'elk' )
+  variables( :a => 'elk', :c => 'elk' )
 end
 
 directory '/etc/nagios3/conf.d/services.d/elk' do
