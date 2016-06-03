@@ -4,3 +4,9 @@ define host{
         alias                   <%= @a %>
         address                 <%= @b %>
         }
+define host{
+        use                     generic-host            ; Name of host template to use
+        host_name               <%= @c %>
+        alias                   <%= @c %>
+        address                 <%= @d %>
+        }
