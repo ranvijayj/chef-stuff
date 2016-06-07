@@ -1,0 +1,8 @@
+DEPENDENCIES
+  nrpe
+    path: .
+    metadata: true
+
+GRAPH
+  nrpe (0.1.3)
+    nrpe (>= 0.0.0)

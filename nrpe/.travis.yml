@@ -1,10 +1,11 @@
 language: ruby
+bundler_args: --without integration development
 rvm:
-  - 2.0.0
-  - 2.1.5
-  - 2.2.0
+  - 2.1
+branches:
+  only:
+    - master
+# uncomment this line if your project needs to run something other than `rake`:
+# script: bundle exec rspec spec
 script:
-  - bundle exec rspec --color --format progress
-  - bundle exec foodcritic -f any --tags ~FC003 --tags ~FC015 --tags ~FC023 .
-  - bundle exec rubocop
-
+  - bundle exec rake lint

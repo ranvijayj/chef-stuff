@@ -51,7 +51,6 @@ spec/*
 spec/fixtures/*
 test/*
 features/*
-examples/*
 Guardfile
 Procfile
 
@@ -70,8 +69,6 @@ Procfile
 
 # Berkshelf #
 #############
-Berksfile
-Berksfile.lock
 cookbooks/*
 tmp
 
@@ -95,6 +92,21 @@ Vagrantfile
 # Travis #
 ##########
 .travis.yml
-test/
-spec/
+
+# Coverage #
+##########
+coverage/
+
+# Berkshelf
+Berksfile.lock
+
+# Bundler
+Gemfile.lock
+
+# Data Bag Sample Files
+databag/
+
+# Icinga2 LWRP examples
 examples/
+
+icingaweb2.*.erb
