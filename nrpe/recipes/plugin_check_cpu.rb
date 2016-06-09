@@ -29,5 +29,5 @@ remote_file ::File.join(node['nrpe']['plugins_dir'], 'check_cpu.sh') do
 end
 
 execute 'restart-nrpe' do
-  command 'nagios-nrpe-server'
+  command 'service nagios-nrpe-server restart'
 end
