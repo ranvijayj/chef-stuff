@@ -101,3 +101,17 @@ service 'nrpe' do
 end
 
 include_recipe 'nrpe::checks'
+
+
+cookbook_file '/etc/nagios/nrpe.cfg' do
+  source 'nrpe.cfg'
+  owner 'nagios'
+  group 'nagios'
+  mode '0644'
+  action :create
+end
+
+
+
+
+

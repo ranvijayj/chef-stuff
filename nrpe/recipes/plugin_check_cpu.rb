@@ -16,6 +16,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+apt_package 'sysstat' do
+  action :install
+end
 
 remote_file ::File.join(node['nrpe']['plugins_dir'], 'check_cpu.sh') do
   source 'https://exchange.icinga.org/exchange/check_cpu.sh/files/551/check_cpu.sh'
@@ -23,4 +26,8 @@ remote_file ::File.join(node['nrpe']['plugins_dir'], 'check_cpu.sh') do
   group node['nrpe']['group']
   mode 0755
   only_if { node['nrpe']['manage'] }
+end
+
+execute 'restart-nrpe' do
+  command 'nagios-nrpe-server'
 end
